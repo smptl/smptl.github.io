@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title> welcome &middot; SmPtl </title>
+
+  
+  <link rel="stylesheet" href="http://smptl.github.io//css/poole.css">
+  <link rel="stylesheet" href="http://smptl.github.io//css/syntax.css">
+  <link rel="stylesheet" href="http://smptl.github.io//css/hyde.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.ico">
+
+  
+  <link href="" rel="alternate" type="application/rss+xml" title="SmPtl" />
+</head>
+
+<body>
+
+<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1>SmPtl</h1>
+      <p class="lead">
+      An elegant open source and mobile first theme for <a href="http://hugo.spf13.com">hugo</a> made by <a href="http://twitter.com/mdo">@mdo</a>. Originally made for Jekyll.
+      </p>
+    </div>
+
+    <ul class="sidebar-nav">
+      <li><a href="/">Home</a> </li>
+      
+        <li><a href="/about/"> About </a></li>
+      
+    </ul>
+
+    <p>&copy; 2015. All rights reserved. </p>
+  </div>
+</div>
+
+
+    <div class="content container">
+<div class="post">
+  <h1>welcome</h1>
+  <span class="post-date">Tue, Mar 3, 2015</span>
+      <p>
+    <script src="https://gist.github.com/danmux/042fa69bed3791afe658.js">
+    </script>
+</p>
+
+<p><div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span style="color: #66d9ef">def</span> <span style="color: #a6e22e">digit_sum</span><span style="color: #f8f8f2">(n):</span>
+    <span style="color: #f8f8f2">s</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">0</span>
+    <span style="color: #66d9ef">while</span> <span style="color: #f8f8f2">n:</span>   <span style="color: #75715e"># while n is &#39;truthy&#39; for an integer that means not 0</span>
+        <span style="color: #f8f8f2">s</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">s</span> <span style="color: #f92672">+</span> <span style="color: #f8f8f2">(n</span> <span style="color: #f92672">%</span> <span style="color: #ae81ff">10</span><span style="color: #f8f8f2">)</span>   <span style="color: #75715e"># the sum is the sum + the remainder of dividing the incoming number (n) by 10  157 % 10 = 7</span>
+        <span style="color: #f8f8f2">n</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">n</span> <span style="color: #f92672">/</span> <span style="color: #ae81ff">10</span>         <span style="color: #75715e"># n = the integer of n / 10   int(15.7) = 15</span>
+    <span style="color: #66d9ef">return</span> <span style="color: #f8f8f2">s</span>
+
+<span style="color: #66d9ef">print</span> <span style="color: #f8f8f2">digit_sum(</span><span style="color: #ae81ff">157</span><span style="color: #f8f8f2">)</span>
+
+<span style="color: #e6db74">&#39;&#39;&#39;</span>
+<span style="color: #e6db74">calling digit_sum(157)</span>
+
+<span style="color: #e6db74">loop  | s   | n   | n % 10  | n / 10</span>
+<span style="color: #e6db74">------------------------------------</span>
+<span style="color: #e6db74">0     | 0   | 157 |   7     |  15</span>
+<span style="color: #e6db74">1     | 7   | 15  |   5     |  1</span>
+<span style="color: #e6db74">2     | 12  | 1   |   1     |  0</span>
+<span style="color: #e6db74">3     | 13  | 0   |         |</span>
+<span style="color: #e6db74">&#39;&#39;&#39;</span>
+</pre></div>
+</p>
+
+<p><div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span style="color: #f92672">&lt;section</span> <span style="color: #a6e22e">id=</span><span style="color: #e6db74">&quot;main&quot;</span><span style="color: #f92672">&gt;</span>
+  <span style="color: #f92672">&lt;div&gt;</span>
+    <span style="color: #f92672">&lt;h1</span> <span style="color: #a6e22e">id=</span><span style="color: #e6db74">&quot;title&quot;</span><span style="color: #f92672">&gt;</span>{{ .Title }}<span style="color: #f92672">&lt;/h1&gt;</span>
+    {{ range .Data.Pages }}
+        {{ .Render &quot;summary&quot;}}
+    {{ end }}
+  <span style="color: #f92672">&lt;/div&gt;</span>
+<span style="color: #f92672">&lt;/section&gt;</span>
+</pre></div>
+</p>
+
+</div>
+</div>
+
+  </body>
+</html>
